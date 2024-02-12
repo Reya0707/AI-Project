@@ -1,3 +1,9 @@
+
+new Typewriter('#h1', {
+  strings: ['Hello', 'World'],
+  autoStart: true,
+});
+
 function showAnswer(response) {
   alert(response.data.answer);
 }
@@ -11,6 +17,9 @@ let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${
 console.log(apiUrl);
 
 axios.get(apiUrl).then(showAnswer);
+
+let list = document.querySelector("danger");
+list.setAttribute("danger");
 
 let button = document.querySelector("#special-button");
 button.style.backgound = "red";
